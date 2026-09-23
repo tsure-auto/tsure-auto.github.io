@@ -8,8 +8,7 @@ Static portfolio and technical blog hosted on GitHub Pages.
 2. Include `id`, `title`, `published`, `excerpt`, and `tags` in its frontmatter.
 3. Push the change to `main`.
 
-GitHub Actions builds and deploys the site automatically. No AWS services or
-application database are required.
+GitHub Actions builds and deploys the site automatically.
 
 ## Build locally
 
