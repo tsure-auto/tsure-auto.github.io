@@ -183,10 +183,32 @@ async function openPostInModal(postId) {
     content.innerHTML = window.marked.parse(markdown);
 
     body.append(title, meta, content);
+    addLanguageLabels(content);
     if (window.Prism) Prism.highlightAllUnder(body);
     addCopyButtonsToCodeBlocks(body);
   } catch (error) {
     body.innerHTML = `<div class="muted">Failed to load post: ${error.message}</div>`;
+  }
+}
+
+function addLanguageLabels(container) {
+  const labels = {
+    bash: "Shell",
+    hcl: "Terraform / HCL",
+    json: "JSON",
+    python: "Python",
+    sql: "SQL",
+    text: "Text",
+    yaml: "YAML",
+  };
+
+  for (const code of container.querySelectorAll('pre > code[class*="language-"]')) {
+    const languageClass = [...code.classList].find((name) => name.startsWith("language-"));
+    if (!languageClass) continue;
+
+    const language = languageClass.slice("language-".length).toLowerCase();
+    const pre = code.parentElement;
+    if (pre) pre.dataset.language = labels[language] || language;
   }
 }
 

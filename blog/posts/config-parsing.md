@@ -66,7 +66,7 @@ This makes it easier to iterate, validate, and gradually expand coverage over ti
 
 Below is a simplified project layout illustrating how parsing responsibilities are separated by concern:
 
-```
+```text
 /input_configs
   test_input_config.txt
 /custom_parsers

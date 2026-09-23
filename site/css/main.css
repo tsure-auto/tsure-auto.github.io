@@ -1217,6 +1217,34 @@ html[data-theme="light"] .blog-post-content code{
   position: relative;
 }
 
+.blog-post-content pre[data-language] {
+  padding-top: 48px;
+}
+
+.blog-post-content pre[data-language]::before {
+  content: attr(data-language);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.10);
+  color: rgba(255,255,255,0.62);
+  background: rgba(255,255,255,0.035);
+  font: 700 0.68rem/1 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+html[data-theme="light"] .blog-post-content pre[data-language]::before {
+  border-bottom-color: rgba(0,0,0,0.10);
+  color: rgba(17,24,39,0.58);
+  background: rgba(0,0,0,0.025);
+}
+
 .blog-subtitle{
   text-align: center;
   margin-top: 0;
@@ -1249,6 +1277,17 @@ html[data-theme="light"] .blog-post-content pre .token{
 
   cursor: pointer;
   user-select: none;
+  z-index: 1;
+}
+
+html[data-theme="light"] .code-copy-btn {
+  border-color: rgba(0,0,0,0.13);
+  background: rgba(255,255,255,0.78);
+  color: #374151;
+}
+
+html[data-theme="light"] .code-copy-btn:hover {
+  background: #ffffff;
 }
 
 .code-copy-btn:hover {

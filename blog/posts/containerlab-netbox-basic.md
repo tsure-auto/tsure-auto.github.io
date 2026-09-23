@@ -233,7 +233,7 @@ topology:
 
 Below is an example of the stdout from the web server showing an object (hostname in this case) was modified in Netbox. This event triggered a POST, which then triggers a redeploy of the containerlab environment.
 
-```
+```text
 === Received webhook from NetBox ===
 Time: 2026-01-10T12:29:44.986209
 Headers: {'Host': '192.168.50.195:5001', 'Accept-Encoding': 'identity', 'User-Agent': 'python-urllib3/2.5.0', 'Content-Type': 'application/json', 'Content-Length': '3652'}

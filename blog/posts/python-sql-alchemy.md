@@ -47,7 +47,7 @@ We’ll use:
 
 ## Project Structure
 
-```
+```text
 sot/
 ├── app.py
 ├── db.py
@@ -63,7 +63,7 @@ sot/
 ## Step 1 - Setup environment
 
 
-```
+```bash
 mkdir -p ~/sot-lab
 cd ~/sot-lab
 
@@ -196,7 +196,7 @@ class ChangeEvent(Base):
 
 Now run it (this will also create the sot.db file):
 
-```
+```text
 (.venv) user@Mac sot-lab % python app.py
 ✅ Database initialized (tables created if missing).
 ```
@@ -345,7 +345,7 @@ if __name__ == "__main__":
 
 ## Step 4 - Run the ingest.py script twice and verify
 
-```
+```text
 (.venv) tsurento@Mac sot-lab % python ingest.py
 ✅ Ingest complete. run_id=1
 (.venv) tsurento@Mac sot-lab % python ingest.py
@@ -359,7 +359,7 @@ At this point, you should see two `run_id` values like those shown above.
 
 ## Step 5 - Verify data inside DB is present and 2nd run went unchanged
 
-```
+```text
 (.venv) user@Mac sot-lab % sqlite3 sot.db
 
 SQLite version 3.51.0 2025-06-12 13:14:41
@@ -375,7 +375,7 @@ sqlite>
 ```
 
 Verify that run 1 made changes, and run 2 did not:
-```
+```sql
 sqlite> SELECT *
    ...> FROM change_events
    ...> WHERE run_id = 2;
@@ -396,7 +396,7 @@ sqlite> .exit
 
 Edit `seed_data.py` and change one of the cidr_block values
 
-```
+```text
 venv) user@Mac sot-lab % python ingest.py
 
 ✅ Ingest complete. run_id=3
@@ -447,7 +447,7 @@ if __name__ == "__main__":
 
 Now run it:
 
-```
+```text
 venv) user@Mac sot-lab % python query.py
 VPC: prod-main (10.10.0.0/16)
 Subnets:
