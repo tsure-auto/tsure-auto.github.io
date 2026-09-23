@@ -1107,6 +1107,93 @@ html[data-theme="dark"] .tech-icon{
 .blog-post-content ul{ list-style: disc; }
 .blog-post-content ol{ list-style: decimal; }
 
+/* Tables */
+.blog-post-content table{
+  width: 100%;
+  margin: 1.3em 0 1.6em;
+  border: 1px solid var(--line);
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.025);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.14);
+  line-height: 1.5;
+}
+
+.blog-post-content th,
+.blog-post-content td{
+  padding: 14px 16px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.blog-post-content th{
+  color: var(--text);
+  background: rgba(31,111,235,0.16);
+  border-bottom: 1px solid var(--line);
+  font-size: 0.88rem;
+  font-weight: 750;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+}
+
+.blog-post-content td{
+  color: var(--muted);
+}
+
+.blog-post-content tbody tr + tr td{
+  border-top: 1px solid var(--line);
+}
+
+.blog-post-content th + th,
+.blog-post-content td + td{
+  border-left: 1px solid var(--line);
+}
+
+.blog-post-content tbody tr:nth-child(even) td{
+  background: rgba(255,255,255,0.025);
+}
+
+.blog-post-content tbody tr:hover td{
+  background: rgba(31,111,235,0.055);
+}
+
+.blog-post-content th:first-child,
+.blog-post-content td:first-child{
+  width: 50%;
+}
+
+html[data-theme="light"] .blog-post-content table{
+  background: rgba(255,255,255,0.56);
+  box-shadow: 0 12px 28px rgba(15,23,42,0.08);
+}
+
+html[data-theme="light"] .blog-post-content th{
+  background: rgba(31,111,235,0.10);
+}
+
+html[data-theme="light"] .blog-post-content tbody tr:nth-child(even) td{
+  background: rgba(15,23,42,0.025);
+}
+
+html[data-theme="light"] .blog-post-content tbody tr:hover td{
+  background: rgba(31,111,235,0.045);
+}
+
+@media (max-width: 720px){
+  .blog-post-content table{
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .blog-post-content th,
+  .blog-post-content td{
+    min-width: 240px;
+  }
+}
+
 /* Blockquotes */
 .blog-post-content blockquote{
   margin: 1.1em 0;
