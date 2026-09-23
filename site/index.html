@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tim Surento</title>
+    <meta
+      name="description"
+      content="Tim Surento's network automation and DevOps portfolio, projects, and technical writing."
+    />
+    <link rel="stylesheet" href="/css/main.css?v=1" />
+    <!-- Prism syntax highlighting -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"
+      defer
+    ></script>
+    <script src="/js/marked.min.js" defer></script>
+
+  </head>
+
+  <body>
+    <!-- Top Navbar -->
+    <header class="topbar" id="topbar">
+      <div class="topbar-inner">
+        <div class="brand">
+          <div class="avatar" aria-hidden="true"></div>
+          <span class="site-name">Tim Surento</span>
+        </div>
+
+        <nav class="nav" aria-label="Primary">
+          <a href="#about" class="nav-link" data-tooltip="About" aria-label="About">
+            <span class="nav-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 12c2.761 0 5-2.239 5-5S14.761 2 12 2 7 4.239 7 7s2.239 5 5 5zm0 2c-4.418 0-8 2.239-8 5v1h16v-1c0-2.761-3.582-5-8-5z"
+                />
+              </svg>
+            </span>
+            <span class="nav-text">About</span>
+          </a>
+
+          <a href="#tech" class="nav-link" data-tooltip="Tech Experience" aria-label="Tech Experience">
+            <span class="nav-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M4 6h16v12H4V6zm2 2v8h12V8H6zm1 10h10v2H7v-2z" />
+              </svg>
+            </span>
+            <span class="nav-text">Tech Experience</span>
+          </a>
+
+
+          <a href="#blog" class="nav-link" data-tooltip="Projects & Blog" aria-label="Projects & Blog">
+            <span class="nav-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M10 4l2 2h8a2 2 0 0 1 2 2v10a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V6a2 2 0 0 1 2-2h6z"
+                />
+              </svg>
+            </span>
+            <span class="nav-text">Projects &amp; Blog</span>
+          </a>
+
+          <a href="#connect" class="nav-link" data-tooltip="Connect" aria-label="Connect">
+            <span class="nav-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                />
+              </svg>
+            </span>
+            <span class="nav-text">Connect</span>
+          </a>
+
+        </nav>
+
+        <div class="actions">
+          <button id="themeToggle" class="icon-btn" type="button" aria-label="Toggle dark/light mode">
+            <span id="themeToggleIcon" aria-hidden="true">🌙</span>
+          </button>
+
+          <a class="icon-btn" href="mailto:tsurento@gmail.com" title="Email" aria-label="Email">✉</a>
+        </div>
+      </div>
+      <div class="topbar-rule"></div>
+    </header>
+
+    <!-- Hero -->
+    <main class="hero-wrap">
+      <section class="hero" aria-label="Intro">
+        <h1 class="hero-name">Tim Surento</h1>
+
+        <div class="hero-title-box">
+          <div class="hero-title">Network Automation | DevOps</div>
+        </div>
+
+        <p class="hero-subtitle">
+          Building reliable, repeatable network automation and DevOps pipelines for safe, fast infrastructure change.
+        </p>
+
+        <div class="cta-row">
+          <a
+            class="btn brand linkedin"
+            href="https://www.linkedin.com/in/tim-surento-42742358/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.047c.476-.9 1.637-1.85 3.368-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zM7.119 20.452H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.727v20.545C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.273V1.727C24 .774 23.2 0 22.222 0z"/>
+            </svg>
+            <span>LinkedIn</span>
+          </a>
+
+          <a
+            class="btn brand github"
+            href="https://github.com/tsure-auto/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 .5C5.73.5.5 5.74.5 12.02c0 5.1 3.292 9.42 7.863 10.95.575.105.785-.25.785-.556 0-.275-.01-1.006-.015-1.975-3.2.695-3.878-1.544-3.878-1.544-.523-1.33-1.277-1.685-1.277-1.685-1.043-.713.079-.699.079-.699 1.154.082 1.761 1.186 1.761 1.186 1.026 1.757 2.693 1.25 3.35.956.104-.743.402-1.25.73-1.538-2.554-.291-5.238-1.279-5.238-5.689 0-1.257.448-2.285 1.183-3.09-.119-.292-.513-1.466.112-3.055 0 0 .966-.31 3.165 1.18a11.03 11.03 0 0 1 2.88-.388c.977.004 1.96.132 2.88.388 2.197-1.49 3.162-1.18 3.162-1.18.627 1.589.233 2.763.114 3.055.737.805 1.182 1.833 1.182 3.09 0 4.42-2.688 5.394-5.25 5.68.414.357.783 1.058.783 2.132 0 1.54-.014 2.78-.014 3.157 0 .309.207.667.79.554C20.21 21.44 23.5 17.12 23.5 12.02 23.5 5.74 18.27.5 12 .5z"/>
+            </svg>
+            <span>GitHub</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- About -->
+    <section id="about" class="content-section about-section">
+      <div class="content-inner">
+        <h2>About Me & Technical Background</h2>
+
+        <p class="about-tagline">
+          Building reliable infrastructure through automation, tooling, and disciplined engineering practices.
+        </p>
+
+        <p>
+          I am a Network Automation and DevOps engineer with experience designing,
+          operating/supporting and automating cloud and on-prem infrastructure across large enterprises and smaller
+          organizations. I’ve worked across a wide range of industries, such as, retail, financial services, and healthcare.
+        </p>
+
+        <p>
+          My background spans traditional network engineering, systems engineering, and cloud engineering,
+          with a long-standing focus on automation, reliability, and operational tooling. I treat
+          infrastructure the same way software teams treat code — version-controlled, testable, and
+          delivered through CI/CD pipelines to make change safer, repeatable, and easier to reason about.
+        </p>
+
+        <ul class="about-list">
+          <li>Network and infrastructure automation using <strong>Python, Ansible, and Terraform</strong></li>
+          <li><strong>CI/CD pipelines</strong> for infrastructure and network changes</li>
+          <li>Cloud platforms (<strong>AWS, GCP, OCI</strong>) and hybrid cloud integrations</li>
+          <li>On-prem data center networking (<strong>Cisco, Juniper, Linux</strong>)</li>
+          <li><strong>NetBox</strong> as a source of truth for inventory, IPAM, and automation workflows</li>
+          <li>Reducing manual effort and operational risk through Git-driven standardization</li>
+        </ul>
+
+        <p>
+          I’m especially interested in bridging the gap between traditional networking practices and modern
+          DevOps operating models — standardizing how infrastructure is defined, deployed, and monitored to
+          improve reliability while reducing operational overhead.
+        </p>
+
+        <p>
+          Outside of work I enjoy sports, movies, music, video games and exploring new technologies.
+        </p>
+      </div>
+    </section>
+
+
+
+    <!-- Tech Experience -->
+    <section id="tech" class="content-section tech-section">
+      <div class="content-inner">
+        <h2>Technical Experience</h2>
+
+          <p class="blog-subtitle muted">
+            Technologies that I am comfortable with.
+          </p>
+
+
+
+        <div class="tech-grid" aria-label="Technology icons grid">
+          <div class="tech-item">
+            <div class="tech-icon-wrap">
+            <img class="tech-icon" src="/assets/icons/ansible.svg" alt="ansible" loading="lazy" />
+            </div>
+            <div class="tech-label">ansible</div>
+          </div>
+
+          <div class="tech-item">
+            <div class="tech-icon-wrap">
+            <img class="tech-icon" src="/assets/icons/atlassian.svg" alt="atlassian" loading="lazy" />
+            </div>
+            <div class="tech-label">atlassian</div>
+          </div>
+
+          <div class="tech-item">
+            <div class="tech-icon-wrap">
+              <img
+                class="tech-icon"
+                src="/assets/icons/aws.svg"
+                alt="aws"
+                loading="lazy"
+              />
+            </div>
+            <div class="tech-label">aws</div>
+          </div>
+
+          <div class="tech-item">
+            <div class="tech-icon-wrap">
+            <img class="tech-icon" src="/assets/icons/cisco.svg" alt="cisco" loading="lazy" />
+            </div>
+            <div class="tech-label">cisco</div>
+          </div>
+
+          <div class="tech-item">
+            <div class="tech-icon-wrap">
+            <img class="tech-icon" src="/assets/icons/docker.svg" alt="docker" loading="lazy" />
+            </div>
+            <div class="tech-label">docker</div>
+          </div>
+
+          <div class="tech-item">
+            <div class="tech-icon-wrap">
+            <img class="tech-icon" src="/assets/icons/f5.svg" alt="f5" loading="lazy" />
+            </div>
+            <div class="tech-label">f5</div>
+          </div>
+
+          <div class="tech-item">
+            <div class="tech-icon-wrap">
+            <img class="tech-icon" src="/assets/icons/grafana.svg" alt="grafana" loading="lazy" />
+            </div>
+            <div class="tech-label">grafana</div>
+          </div>
+
+          <div class="tech-item">
+            <div class="tech-icon-wrap">
+            <img class="tech-icon" src="/assets/icons/jinja.svg" alt="jinja" loading="lazy" />
+            </div>
+            <div class="tech-label">jinja</div>
+          </div>
+
+          <div class="tech-item">
+            <div class="tech-icon-wrap">
+            <img class="tech-icon" src="/assets/icons/json.svg" alt="json" loading="lazy" />
+            </div>
+            <div class="tech-label">json</div>
+          </div>
+
+          <div class="tech-item">
+            <div class="tech-icon-wrap">
+            <img class="tech-icon" src="/assets/icons/juniper.svg" alt="juniper" loading="lazy" />
+            </div>
+            <div class="tech-label">juniper</div>
+          </div>
+
+          <div class="tech-item">
+            <div class="tech-icon-wrap">
+            <img class="tech-icon" src="/assets/icons/kubernetes.svg" alt="kubernetes" loading="lazy" />
+            </div>
+            <div class="tech-label">kubernetes</div>
+          </div>
+
+          <div class="tech-item">
+            <div class="tech-icon-wrap">
+            <img class="tech-icon" src="/assets/icons/linux.svg" alt="linux" loading="lazy" />
+            </div>
+            <div class="tech-label">linux</div>
+          </div>
+
+          <div class="tech-item">
+            <div class="tech-icon-wrap">
+            <img class="tech-icon" src="/assets/icons/netbox.svg" alt="netbox" loading="lazy" />
+            </div>
+            <div class="tech-label">netbox</div>
+          </div>
+
+          <div class="tech-item">
+            <div class="tech-icon-wrap">
+            <img class="tech-icon" src="/assets/icons/nvidia.svg" alt="nvidia" loading="lazy" />
+            </div>
+            <div class="tech-label">nvidia cumulus linux</div>
+          </div>
+
+          <div class="tech-item">
+            <div class="tech-icon-wrap">
+            <img class="tech-icon" src="/assets/icons/oci.svg" alt="oci" loading="lazy" />
+            </div>
+            <div class="tech-label">oci</div>
+          </div>
+
+          <div class="tech-item">
+            <div class="tech-icon-wrap">
+            <img class="tech-icon" src="/assets/icons/opensearch.svg" alt="opensearch" loading="lazy" />
+            </div>
+            <div class="tech-label">opensearch</div>
+          </div>
+
+          <div class="tech-item">
+            <div class="tech-icon-wrap">
+            <img class="tech-icon" src="/assets/icons/paloalto.svg" alt="paloalto" loading="lazy" />
+            </div>
+            <div class="tech-label">paloalto</div>
+          </div>
+
+          <div class="tech-item">
+            <div class="tech-icon-wrap">
+            <img class="tech-icon" src="/assets/icons/prometheus.svg" alt="prometheus" loading="lazy" />
+            </div>
+            <div class="tech-label">prometheus</div>
+          </div>
+
+          <div class="tech-item">
+            <div class="tech-icon-wrap">
+            <img class="tech-icon" src="/assets/icons/python.svg" alt="python" loading="lazy" />
+            </div>
+            <div class="tech-label">python</div>
+          </div>
+
+          <div class="tech-item">
+            <div class="tech-icon-wrap">
+            <img class="tech-icon" src="/assets/icons/slack.svg" alt="slack" loading="lazy" />
+            </div>
+            <div class="tech-label">slack</div>
+          </div>
+
+          <div class="tech-item">
+            <div class="tech-icon-wrap">
+            <img class="tech-icon" src="/assets/icons/terraform.svg" alt="terraform" loading="lazy" />
+            </div>
+            <div class="tech-label">terraform</div>
+          </div>
+
+          <div class="tech-item">
+            <div class="tech-icon-wrap">
+            <img class="tech-icon" src="/assets/icons/ubiquiti.svg" alt="ubiquiti" loading="lazy" />
+            </div>
+            <div class="tech-label">ubiquiti</div>
+          </div>
+
+          <div class="tech-item">
+            <div class="tech-icon-wrap">
+            <img class="tech-icon" src="/assets/icons/wireshark.svg" alt="wireshark" loading="lazy" />
+            </div>
+            <div class="tech-label">wireshark</div>
+          </div>
+
+          <div class="tech-item">
+            <div class="tech-icon-wrap">
+            <img class="tech-icon" src="/assets/icons/yaml.svg" alt="yaml" loading="lazy" />
+            </div>
+            <div class="tech-label">yaml</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog -->
+    <section id="blog" class="content-section blog-section">
+      <div class="content-inner">
+        <h2>Projects & Blog</h2>
+          <div class="blog-filterbar" aria-label="Blog tag filters">
+            <div class="blog-filterbar-left muted">Filter:</div>
+            <div id="blogFilters" class="blog-filters" role="list"></div>
+          </div>
+        <div id="blogStatus" class="muted" style="margin-top: 14px; text-align:center;">
+          Loading…
+        </div>
+
+        <div id="blogGrid" class="blog-grid" style="margin-top: 18px;"></div>
+      </div>
+    </section>
+
+    <!-- Blog Modal Overlay -->
+    <div id="blogModal" class="blog-modal" aria-hidden="true">
+      <div class="blog-modal-backdrop" data-close="true"></div>
+
+      <div class="blog-modal-dialog" role="dialog" aria-modal="true" aria-label="Blog post">
+        <button class="blog-modal-close" type="button" aria-label="Close" data-close="true">×</button>
+        <div id="blogModalBody" class="blog-modal-body"></div>
+      </div>
+    </div>
+
+    <!-- Connect Section-->
+    <section id="connect" class="content-section connect-section">
+      <div class="content-inner">
+        <h2>Connect</h2>
+
+        <p class="muted" style="text-align:center; margin-top: 0;">
+          Want to reach out or see what I’m building? Here are the best places.
+        </p>
+
+        <div class="connect-grid">
+          <!-- Email -->
+          <a class="connect-card" href="mailto:tsurento@gmail.com">
+            <div class="connect-icon" aria-hidden="true">✉️</div>
+            <div class="connect-text">
+              <div class="connect-title">Email</div>
+              <div class="connect-sub">tsurento@gmail.com</div>
+            </div>
+          </a>
+
+          <!-- LinkedIn -->
+          <a class="connect-card" href="https://www.linkedin.com/in/tim-surento-42742358/" target="_blank" rel="noopener noreferrer">
+            <div class="connect-icon" aria-hidden="true">in</div>
+            <div class="connect-text">
+              <div class="connect-title">LinkedIn</div>
+              <div class="connect-sub">Connect professionally</div>
+            </div>
+          </a>
+
+          <!-- GitHub -->
+          <a class="connect-card" href="https://github.com/tsure-auto/" target="_blank" rel="noopener noreferrer">
+            <div class="connect-icon" aria-hidden="true">⌁</div>
+            <div class="connect-text">
+              <div class="connect-title">GitHub</div>
+              <div class="connect-sub">Repos & projects</div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="disclaimer">
+      <p>
+        The views and opinions expressed on this site are my own and do not reflect
+        those of my employer. All content is provided for informational purposes only.
+      </p>
+    </section>
+
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-left">
+          © 2026 Tim Surento. All rights reserved.
+        </div>
+
+        <div class="footer-right">
+          Network Automation • Cloud • DevOps
+        </div>
+      </div>
+    </footer>
+
+
+    <script src="/js/main.js" defer></script>
+  </body>
+</html>
